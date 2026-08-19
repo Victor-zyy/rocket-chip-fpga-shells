@@ -72,6 +72,9 @@ set ipdir [file join $wrkdir ip]
 create_project -part $part_fpga -force $top
 
 set_param messaging.defaultLimit 1000000
+# for eda
+# set_param general.maxThreads 32
+# puts "Vivado maxThreads = [get_param general.maxThreads]"
 
 # Set the board part, target language, default library, and IP directory
 # paths for the current project
